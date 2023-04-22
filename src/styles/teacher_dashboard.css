@@ -70,12 +70,12 @@
     padding-left: 10px;
   }
   
-  .teacher-dashboard-content__student-roster__item:nth-child(2) {
-    background-color: rgb(232, 232, 232);
+  .teacher-dashboard-content__student-roster__ {
+   background-color: aliceblue;
   }
   
   .teacher-dashboard-content__student-questions {
-    background-color: #9797971A;
+    
     border-radius: 16px;
     flex: 1;
     margin-left: 5px;
@@ -117,10 +117,10 @@
 
 
 .dashboard__low-improving-subjects {
-    max-height: 400px;
-    overflow-y: scroll;
+    
+    height: 500px;
     margin-top: 20px;
-    width: 96.5vw;
+    width: 93.5vw;
     display: flex;
     justify-content: space-between;
     justify-content: center;
@@ -133,11 +133,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 20px 30px;
-   
+    padding: 40px 30px;
+   height: 70% !important;
     border-radius: 10px;
     margin-left: 100px;
     margin-right: 100px;
+    border: 1px solid black;
+    margin-top: 80px;
 }
 
 .dashboard__low-improving-subjects__item__right {

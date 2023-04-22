@@ -92,6 +92,7 @@ const TeacherDashboard = ({}) => {
             sx={{ height: 34 }}
             onClick={() => handleSignout()}
             className="closeButton"
+            style={{ marginRight: "40px" }}
           >
             Logout
           </Button>
@@ -103,75 +104,87 @@ const TeacherDashboard = ({}) => {
         <div className="dashboard__low-improving-subjects">
           <div className="dashboard__low-improving-subjects__item">
             <div className="dashboard__low-improving-subjects__item__left">
-              <h3 style={{ fontSize: 24, marginBottom: 6 }}>Literature</h3>
+              <h3 style={{ fontSize: 24, marginBottom: 6, marginLeft: "30px" }}>
+                Literature
+              </h3>
               <h1
                 style={{
                   color: "#FD0404",
                   fontSize: 31,
                   fontWeight: "bolder",
+                  marginBottom: "10px",
                 }}
               >
                 {literatureCounter.toString()} Questions
               </h1>
-              <u>
-                <h5
-                  style={{
-                    color: "#77A52D",
-                    fontSize: 18,
-                    marginBottom: 6,
-                  }}
-                >
-                  Specific Topics
-                </h5>
-              </u>
-              <p>1. Reading</p>
-              <p>2. Writing</p>
-              <p>3. Poetry</p>
+              <div className="specContainer">
+                <u>
+                  <h5
+                    style={{
+                      color: "#77A52D",
+                      fontSize: 18,
+                      marginBottom: 6,
+                    }}
+                  >
+                    Specific Topics
+                  </h5>
+                </u>
+                <p>1. Reading</p>
+                <p>2. Writing</p>
+                <p>3. Poetry</p>
+              </div>
             </div>
 
             <div className="dashboard__low-improving-subjects__item__right">
-              <h3 style={{ fontSize: 24 }}>More Resources</h3>
+              <h3 style={{ fontSize: 24, marginTop: "15px" }}>
+                More Resources
+              </h3>
 
               <h5>View More Details</h5>
             </div>
           </div>
           <div className="dashboard__low-improving-subjects__item">
             <div className="dashboard__low-improving-subjects__item__left">
-              <h3 style={{ fontSize: 24, marginBottom: 6 }}>Science</h3>
+              <h3 style={{ fontSize: 24, marginBottom: 6, marginLeft: "40px" }}>
+                Science
+              </h3>
               <h1
                 style={{
                   color: "#FD0404",
                   fontSize: 31,
                   fontWeight: "bolder",
+                  marginBottom: "10px",
                 }}
               >
                 {scienceCounter} Questions
               </h1>
-              <u>
-                <h5
-                  style={{
-                    color: "#77A52D",
-                    fontSize: 18,
-                    marginBottom: 6,
-                  }}
-                >
-                  Specific Topics
-                </h5>
-              </u>
-              <p>1. Parts of the Flower</p>
-              <p>2. General Biology</p>
-              <p>3. Omissions</p>
+              <div className="specContainer">
+                <u>
+                  <h5
+                    style={{
+                      color: "#77A52D",
+                      fontSize: 18,
+                      marginBottom: 6,
+                    }}
+                  >
+                    Specific Topics
+                  </h5>
+                </u>
+                <p>1. Chemistry</p>
+                <p>2. General Biology</p>
+                <p>3. Omissions</p>
+              </div>
             </div>
             <div className="dashboard__low-improving-subjects__item__right">
-              <h3 style={{ fontSize: 24 }}>More Resources</h3>
+              <h3 style={{ fontSize: 24, marginTop: "15px" }}>
+                More Resources
+              </h3>
               <h5>View More Details</h5>
             </div>
           </div>
           <div className="dashboard__low-improving-subjects__item">
             <div className="dashboard__low-improving-subjects__item__left">
-              <h3
-                style={{ fontSize: 24, marginBottom: 6, textAlign: "center" }}
-              >
+              <h3 style={{ fontSize: 24, marginBottom: 6, marginLeft: "40px" }}>
                 History
               </h3>
               <h1
@@ -179,62 +192,70 @@ const TeacherDashboard = ({}) => {
                   color: "#FD0404",
                   fontSize: 31,
                   fontWeight: "bolder",
+                  marginBottom: "10px",
                 }}
               >
                 {historyCounter} Questions
               </h1>
-              <u>
-                <h5
-                  style={{
-                    color: "#77A52D",
-                    fontSize: 18,
-                    marginBottom: 6,
-                  }}
-                >
-                  Specific Topics
-                </h5>
-              </u>
-              <p>1. Early History</p>
-              <p>2. Medieval History</p>
-              <p>3. Modern History</p>
+              <div className="specContainer">
+                <u>
+                  <h5
+                    style={{
+                      color: "#77A52D",
+                      fontSize: 18,
+                      marginBottom: 6,
+                    }}
+                  >
+                    Specific Topics
+                  </h5>
+                </u>
+                <p>1. Early History</p>
+                <p>2. Medieval History</p>
+                <p>3. Modern History</p>
+              </div>
             </div>
-
             <div className="dashboard__low-improving-subjects__item__right">
-              <h3 style={{ fontSize: 24 }}>More Resources</h3>
+              <h3 style={{ fontSize: 24, marginTop: "15px" }}>
+                More Resources
+              </h3>
               <h5>View More Details</h5>
             </div>
           </div>
 
           <div className="dashboard__low-improving-subjects__item">
             <div className="dashboard__low-improving-subjects__item__left">
-              <h3 style={{ fontSize: 24, marginBottom: 6 }}>Math</h3>
+              <h3 style={{ fontSize: 24, marginBottom: 6, marginLeft: "55px" }}>
+                Math
+              </h3>
               <h1
                 style={{
                   color: "#FD0404",
                   fontSize: 31,
                   fontWeight: "bolder",
+                  marginBottom: "10px",
                 }}
               >
                 {mathCounter.toString()} Questions
               </h1>
-              <u>
-                <h5
-                  style={{
-                    color: "#77A52D",
-                    fontSize: 18,
-                    marginBottom: 6,
-                  }}
-                >
-                  Specific Topics
-                </h5>
-              </u>
-              <p>1. Calculus</p>
-              <p>2. Geometry</p>
-              <p>3. Arithmetic</p>
+              <div className="specContainer">
+                <u>
+                  <h5
+                    style={{
+                      color: "#77A52D",
+                      fontSize: 18,
+                      marginBottom: 6,
+                    }}
+                  >
+                    Specific Topics
+                  </h5>
+                </u>
+                <p>1. Calculus</p>
+                <p>2. Geometry</p>
+                <p>3. Arithmetic</p>
+              </div>
             </div>
-
             <div className="dashboard__low-improving-subjects__item__right">
-              <h3 style={{ fontSize: 24 }}>More Resources</h3>
+              <h3 style={{ fontSize: 24, marginTop:"15px" }}>More Resources</h3>
               <h5>View More Details</h5>
             </div>
           </div>
@@ -269,7 +290,7 @@ const TeacherDashboard = ({}) => {
 
         <div className="teacher-dashboard-content__items">
           <div className="teacher-dashboard-content__student-roster">
-            <h3>Best Responses</h3>
+            <h3>Liked Responses</h3>
 
             {teacherDashboardData &&
               teacherDashboardData.map((student, index) => {

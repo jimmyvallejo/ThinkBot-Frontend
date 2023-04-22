@@ -292,3 +292,6 @@ margin-bottom: 30px;
   display: flex;
   justify-content: center;
 }
+.specContainer {
+  margin-left: 20px;
+}
