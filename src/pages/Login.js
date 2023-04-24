@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Grid, Typography } from "@mui/material";
 import CircularProgress from "@mui/material/CircularProgress";
 import TextInput from "../components/TextInput";
-import Button from "../components/Buttton";
+import Button from "../components/Button";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { AuthContext } from "../context/AuthContext";
@@ -14,7 +14,7 @@ const underlineStyle = {
   fontWeight: 800,
 };
 
-function Login({ history }) {
+function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -30,10 +30,7 @@ function Login({ history }) {
     };
 
     try {
-      const results = await axios.post(
-        `${baseUrl}/auth/login`,
-        login
-      );
+      const results = await axios.post(`${baseUrl}/auth/login`, login);
 
       localStorage.setItem("authToken", results.data.token);
       await authenticateUser();
@@ -46,9 +43,9 @@ function Login({ history }) {
 
   useEffect(() => {
     if (user) {
-      if (user.role == "student") {
+      if (user.role === "student") {
         navigate("/tutor");
-      } else if (user.role == "teacher") {
+      } else if (user.role === "teacher") {
         navigate(`/teacher-dashboard`);
       }
     }

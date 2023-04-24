@@ -1,5 +1,5 @@
 import * as React from "react";
-import Button from "../components/Buttton";
+import Button from "../components/Button";
 import { useNavigate } from "react-router-dom";
 import { colors } from "../styles/colors";
 import Box from "@mui/material/Box";
@@ -72,9 +72,9 @@ export default function Welcome() {
 
   useEffect(() => {
     if (user) {
-      if (user.role == "student") {
+      if (user.role === "student") {
         navigate("/tutor");
-      } else if (user.role == "teacher") {
+      } else if (user.role === "teacher") {
         navigate(`/teacher-dashboard`);
       }
     }

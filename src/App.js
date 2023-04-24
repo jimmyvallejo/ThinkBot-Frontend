@@ -1,14 +1,12 @@
-import React, { useContext } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider, createTheme } from "@mui/material";
 import { AuthContextProvider } from "./context/AuthContext";
 import { ChatContextProvider } from "./context/ChatContext";
-import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Chat from "./pages/ChatPage";
 import Navbar from "./components/Navbar";
-import Welcome from "./pages/welcome";
+import Welcome from "./pages/Welcome";
 
 
 import TeacherDashboard from "./pages/Teacher-Dashboard";
@@ -40,7 +38,6 @@ function App() {
                 path="/teacher-dashboard"
                 element={<TeacherDashboard />}
               />
-              <Route exact path="/" element={<Home />} />
             </Routes>
           </ThemeProvider>
         </BrowserRouter>

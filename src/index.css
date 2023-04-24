@@ -285,7 +285,7 @@ margin-bottom: 30px;
 .closeButton {
   display: flex;
   align-self: center;
-  margin-bottom: 30px;
+  margin-top: 15px !important;
 }
 
 .demos {

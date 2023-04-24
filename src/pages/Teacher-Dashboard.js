@@ -77,6 +77,26 @@ const TeacherDashboard = ({}) => {
     logout();
   };
 
+  const scrollToBottom = () => {
+      window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        left: 0,
+        behavior: "smooth",
+      });
+  };
+
+  const handleQuestions = (sLiked, pImg) => {
+    setStudentData({
+      liked: sLiked,
+      img: pImg,
+    });
+    
+  }
+
+  useEffect(() => {
+      scrollToBottom()
+  }, [studentData]);
+
   return (
     <Box sx={{ paddingLeft: 3, paddingRight: 3 }}>
       <Grid
@@ -255,7 +275,9 @@ const TeacherDashboard = ({}) => {
               </div>
             </div>
             <div className="dashboard__low-improving-subjects__item__right">
-              <h3 style={{ fontSize: 24, marginTop:"15px" }}>More Resources</h3>
+              <h3 style={{ fontSize: 24, marginTop: "15px" }}>
+                More Resources
+              </h3>
               <h5>View More Details</h5>
             </div>
           </div>
@@ -308,11 +330,7 @@ const TeacherDashboard = ({}) => {
                       variant="outlined"
                       color="error"
                       sx={{ height: 34 }}
-                      onClick={() =>
-                        setStudentData({
-                          liked: student.liked,
-                          img: student.profile_image,
-                        })
+                      onClick={() => handleQuestions(student.liked, student.profile_image)
                       }
                     >
                       View Questions

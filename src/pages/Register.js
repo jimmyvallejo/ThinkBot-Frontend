@@ -2,9 +2,8 @@ import { useState, useContext, useEffect } from "react";
 import { Grid, Typography, MenuItem } from "@mui/material";
 import CircularProgress from "@mui/material/CircularProgress";
 import TextInput from "../components/TextInput";
-import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
-import Button from "../components/Buttton";
+import Button from "../components/Button";
 import axios from "axios";
 import { baseUrl } from "../services/baseUrl";
 
@@ -13,79 +12,78 @@ const underlineStyle = {
   fontWeight: 800,
 };
 
-function Register({ history }) {
+function Register() {
   const navigate = useNavigate();
-  const context = useContext(AuthContext);
+ 
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [age, setAge] = useState("");
   const [role, setRole] = useState("");
-  const [users, setUsers] = useState([])
+  const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [teacher, setTeacher] = useState("")
-  const [fullname, setFullName] = useState("")
-  const [profile_image, setProfileImage] = useState("")
+  const [teacher, setTeacher] = useState("");
+  const [fullname, setFullName] = useState("");
+  const [profile_image, setProfileImage] = useState("");
 
   const age_options = [5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18];
-
 
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const result = await axios.get(`${baseUrl}/users`)
-        
-        console.log(result.data)
-         result.data.map((elem) => {
-          console.log(elem)
-          if (elem.role === "teacher"){
-           setUsers((prevItems) => [...prevItems, elem]);
-          }
-         })
-         console.log(users)
-      } catch(error) {
-        console.error(error)
-      }
-    }
-    fetchUsers()
-  },[])
+        const result = await axios.get(`${baseUrl}/users`);
 
+        console.log(result.data);
+        result.data.map((elem) => {
+          console.log(elem);
+          if (elem.role === "teacher") {
+            setUsers((prevItems) => [...prevItems, elem]);
+          }
+        });
+        console.log(users);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchUsers();
+  }, []);
 
   const handleRegister = async (e) => {
-  setLoading(true);
-  try {
-    const user = {
-      username,
-      email,
-      password,
-      age,
-      role,
-      teacher,
-      fullname,
-      profile_image
-    };
-      console.log(user)
-    await axios.post(`${baseUrl}/auth/signup`, user);
-    setLoading(false);
-    navigate("/login");
-  } catch (e) {
-    console.error(e);
-    setLoading(false);
-  }
-};
+    setLoading(true);
+    try {
+      const user = {
+        username,
+        email,
+        password,
+        age,
+        role,
+        teacher,
+        fullname,
+        profile_image,
+      };
+      console.log(user);
+      await axios.post(`${baseUrl}/auth/signup`, user);
+      setLoading(false);
+      navigate("/login");
+    } catch (e) {
+      console.error(e);
+      setLoading(false);
+    }
+  };
 
-const handleFileSubmit = (e) => {
-  let fileUpload = new FormData();
-  fileUpload.append("profile_image", e.target.files[0]);
-  axios.post(`${baseUrl}/auth/add-picture`, fileUpload)
-    .then((result) => {
-      console.log(result.data)
-      setProfileImage(result.data)
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-};
+  const handleFileSubmit = (e) => {
+    let fileUpload = new FormData();
+    fileUpload.append("profile_image", e.target.files[0]);
+    axios
+      .post(`${baseUrl}/auth/add-picture`, fileUpload)
+      .then((result) => {
+        console.log(result.data);
+        setProfileImage(result.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   return (
     <Grid encType="multipart/form-data" container style={{ height: "100vh" }}>
