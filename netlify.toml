@@ -1,3 +1,0 @@
-[build]
-  command = "REACT_APP_API_KEY=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 npm run build"
-  publish = "build"

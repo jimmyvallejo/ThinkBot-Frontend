@@ -67,10 +67,10 @@ const Chat = () => {
       });
   };
 
-  const apiKey = process.env.REACT_APP_API_KEY;
+  
 
   const configuration = new Configuration({
-    apiKey: apiKey,
+    apiKey: process.env.REACT_APP_API_KEY,
   });
 
   const openai = new OpenAIApi(configuration);
