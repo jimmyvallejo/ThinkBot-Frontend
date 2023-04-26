@@ -127,13 +127,13 @@ function Register() {
         >
           Personal Student AI Robot Tutor
         </Typography>
-        <img style={{ marginTop: "3rem" }} src="./mdc.svg" />
+        <img
+          className="logoImg"
+          style={{ marginTop: "3rem" }}
+          src="./mdc.svg"
+        />
       </Grid>
-      <Grid
-        item
-        xs={6}
-        style={{ paddingTop: isSmallScreen ? "3rem" : "7rem" }}
-      >
+      <Grid item xs={6} style={{ paddingTop: isSmallScreen ? "3rem" : "7rem" }}>
         <Typography
           variant="h1"
           align="center"
@@ -148,7 +148,7 @@ function Register() {
           variant="h3"
           align="center"
           style={{
-            fontSize: isSmallScreen ?"18px" : "24px",
+            fontSize: isSmallScreen ? "18px" : "24px",
             fontWeight: 300,
           }}
         >
