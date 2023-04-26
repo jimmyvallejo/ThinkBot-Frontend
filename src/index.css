@@ -295,3 +295,29 @@ margin-bottom: 30px;
 .specContainer {
   margin-left: 20px;
 }
+
+
+  @media (max-width: 1000px) {
+  .logoImg {
+    width: 150px;
+    margin-top: 70px;
+  }
+}
+
+  @media (max-width: 1000px) {
+  .firstButtons {
+   margin-left: 1rem;
+    margin-top: 4.5rem;
+  }
+}
+
+  @media (max-width: 1000px) {
+  .demos {
+   display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
