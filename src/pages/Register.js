@@ -1,6 +1,8 @@
-import { useState, useContext, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Grid, Typography, MenuItem } from "@mui/material";
 import CircularProgress from "@mui/material/CircularProgress";
+import { useTheme } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import TextInput from "../components/TextInput";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
@@ -14,6 +16,9 @@ const underlineStyle = {
 
 function Register() {
   const navigate = useNavigate();
+
+    const theme = useTheme();
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
  
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
@@ -98,12 +103,12 @@ function Register() {
           paddingTop: "4.3rem",
         }}
       >
-        <img src="./logo.svg" />
+        <img className="logoImg" src="./logo.svg" />
         <Typography
           variant="h1"
           align="center"
           style={{
-            fontSize: "64px",
+            fontSize: isSmallScreen ? "32px" : "64px",
             fontWeight: 700,
             color: "white",
           }}
@@ -127,7 +132,7 @@ function Register() {
       <Grid
         item
         xs={6}
-        style={{ paddingTop: role !== "student" ? "9rem" : "7rem" }}
+        style={{ paddingTop: isSmallScreen ? "3rem" : "7rem" }}
       >
         <Typography
           variant="h1"
@@ -137,13 +142,13 @@ function Register() {
             fontWeight: 700,
           }}
         >
-          Create an Account
+          {isSmallScreen ? "" : "Create an Account"}
         </Typography>
         <Typography
           variant="h3"
           align="center"
           style={{
-            fontSize: "24px",
+            fontSize: isSmallScreen ?"18px" : "24px",
             fontWeight: 300,
           }}
         >
@@ -190,7 +195,7 @@ function Register() {
             label="Profile Picture"
             type="file"
             onChange={(e) => handleFileSubmit(e)}
-            style={{ width: "60%" }}
+            style={{ width: isSmallScreen ? "58.5%" : "60%" }}
             InputLabelProps={{
               shrink: true,
               classes: { root: "file-input-placeholder" },
