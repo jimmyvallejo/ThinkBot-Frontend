@@ -156,7 +156,7 @@ function Register() {
           <span style={underlineStyle}>teacher?</span>
         </Typography>
 
-        <Grid item xs={12} style={{ textAlign: "center", marginTop: "4rem" }}>
+        <Grid item xs={12} style={{ textAlign: "center", marginTop: isSmallScreen ? "2rem" : "4rem" }}>
           <TextInput
             label="Email"
             placeholder="Enter your email"
