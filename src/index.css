@@ -311,6 +311,14 @@ margin-bottom: 30px;
   }
 }
 
+
+
+  .firstButtons {
+  display: flex;
+  flex-direction: column;
+  }
+
+
   @media (max-width: 1000px) {
   .demos {
    display: flex;
