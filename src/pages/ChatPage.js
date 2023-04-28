@@ -228,7 +228,7 @@ const Chat = () => {
               : "Hello, my name is Henry"}
           </h1>
           <h1 className="tutor">I'm your personal AI tutor</h1>
-          <h3>What would you like help with today?</h3>
+          <h3 className="thinkh3">What would you like help with today?</h3>
         </>
       )}
       {!showChat ? (

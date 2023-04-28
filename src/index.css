@@ -31,6 +31,22 @@ nav {
     width: 292px;
 }
 
+  @media (max-width: 1000px) {
+  nav {
+    width: 125px;
+  } 
+}
+
+  @media (max-width: 1000px) {
+  nav h3{
+    width: 40px;
+    font-size: 25px !important;
+   margin-right:65px ;
+  } 
+}
+
+
+
 .navdiv {
   padding-bottom: 25px;
   
@@ -41,6 +57,14 @@ nav img {
     width: 292px;
     height: 292px !important;
 }
+
+  @media (max-width: 1000px) {
+  nav img {
+    width: 125px;
+    height: 125px !important
+  } 
+}
+
 
 .navItem {
    
@@ -86,9 +110,13 @@ nav img {
     align-items: center;
     justify-content: center;
     padding-top: 50px;
-    margin-left: 350px;
-    
-  
+    margin-left: 350px; 
+}
+
+  @media (max-width: 1000px) {
+  .GPT{
+    margin-left: 150px;
+  } 
 }
 
 code {
@@ -102,13 +130,36 @@ code {
   margin-bottom: 20px;
 }
 
+  @media (max-width: 1000px) {
+  .chatIntro{
+    font-size: 25px;
+    margin-right: 40px;
+    text-align: center;
+  } 
+}
+
 .tutor{
   font-size: 40px;
   color: black;
   margin-bottom: 30px;
-  
-
 }
+
+  @media (max-width: 1000px) {
+  .tutor{
+    font-size: 25px;
+    margin-right: 40px;
+    text-align: center;
+  } 
+}
+
+  @media (max-width: 1000px) {
+  .thinkh3{
+
+    margin-right: 40px;
+    text-align: center;
+  } 
+}
+
 
 .input {
 
@@ -174,12 +225,26 @@ code {
     margin-top: 100px;
 }
 
+  @media (max-width: 1000px) {
+  .buttons{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+  } 
+}
+
 .buttons div {
  display: flex;
  flex-direction: column;
  align-items: center;
  margin-left: 120px;
  margin-top: 100px;
+}
+
+  @media (max-width: 1000px) {
+  .buttons div{
+    margin-bottom: 30px;
+  } 
 }
 
 
@@ -194,6 +259,11 @@ code {
     width: 150px;
 }
 
+  @media (max-width: 1000px) {
+  .buttons img{
+   width: 125px;
+  } 
+}
 .submit {
   font-size: 20px;
   margin-top: 130px;

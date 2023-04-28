@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-
+import { useTheme } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import { AuthContext } from "../context/AuthContext";
 import { ChatContext } from "../context/ChatContext";
 import Button from "./Button";
@@ -10,6 +11,10 @@ import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const location = useLocation();
+  
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+  
   const { user, logout } = useContext(AuthContext);
 
   const navigate = useNavigate();
@@ -42,14 +47,15 @@ const Navbar = () => {
       <div className="navstart">
         <Link className="navName" to={"/"}>
           <img className="Robot" src="./Robot.png"></img>
-          <h3>AI Tutor</h3>
+          <h3>Thinkbot</h3>
         </Link>
         {location.pathname === "/tutor" && (
           <Button
             style={{
               background: colors.whites[500],
+              width: "100%",
               color: colors.blues[500],
-              fontSize: "20px",
+              fontSize: isSmallScreen ? "15px" : "20px",
               marginTop: "40px",
             }}
             onClick={() => handleChange()}
