@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Grid, Typography } from "@mui/material";
+import { useTheme } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import CircularProgress from "@mui/material/CircularProgress";
 import TextInput from "../components/TextInput";
 import Button from "../components/Button";
@@ -15,6 +17,10 @@ const underlineStyle = {
 };
 
 function Login() {
+   
+  const theme = useTheme();
+   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+  
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -64,7 +70,7 @@ function Login() {
           paddingTop: "4.3rem",
         }}
       >
-        <img src="./logo.svg" />
+        <img className="logoImg" src="./logo.svg" />
         <Typography
           variant="h1"
           align="center"
@@ -88,7 +94,7 @@ function Login() {
         >
           Personal Student AI Robot Tutor
         </Typography>
-        <img style={{ marginTop: "3rem" }} src="./mdc.svg" />
+        <img className="logoImg" style={{ marginTop: "3rem" }} src="./mdc.svg" />
       </Grid>
 
       <Grid item xs={6} style={{ paddingTop: "9rem" }}>
