@@ -148,7 +148,7 @@ function Register() {
           variant="h3"
           align="center"
           style={{
-            fontSize: isSmallScreen ? "18px" : "24px",
+            fontSize: isSmallScreen ? "16px" : "24px",
             fontWeight: 300,
           }}
         >

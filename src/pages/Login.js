@@ -75,7 +75,7 @@ function Login() {
           variant="h1"
           align="center"
           style={{
-            fontSize: "64px",
+            fontSize: isSmallScreen ? "32px" : "64px",
             fontWeight: 700,
             color: "white",
           }}
@@ -94,7 +94,11 @@ function Login() {
         >
           Personal Student AI Robot Tutor
         </Typography>
-        <img className="logoImg" style={{ marginTop: "3rem" }} src="./mdc.svg" />
+        <img
+          className="logoImg"
+          style={{ marginTop: "3rem" }}
+          src="./mdc.svg"
+        />
       </Grid>
 
       <Grid item xs={6} style={{ paddingTop: "9rem" }}>
@@ -102,7 +106,7 @@ function Login() {
           variant="h1"
           align="center"
           style={{
-            fontSize: "64px",
+            fontSize: isSmallScreen ? "24px" : "64px",
             fontWeight: 700,
           }}
         >
@@ -116,10 +120,7 @@ function Login() {
             fontWeight: 300,
             marginTop: "1rem",
           }}
-        >
-          Are you a <span style={underlineStyle}>student</span> or a{" "}
-          <span style={underlineStyle}>teacher?</span>
-        </Typography>
+        ></Typography>
 
         <Grid item xs={12} style={{ textAlign: "center", marginTop: "4rem" }}>
           <TextInput
