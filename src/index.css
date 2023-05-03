@@ -34,6 +34,7 @@ nav {
   @media (max-width: 1000px) {
   nav {
     width: 125px;
+    height: 100%;
   } 
 }
 
@@ -113,6 +114,7 @@ nav img {
     margin-left: 350px; 
 }
 
+
   @media (max-width: 1000px) {
   .GPT{
     margin-left: 150px;
@@ -167,13 +169,18 @@ code {
   padding: 0px 350px 20px 10px;
   border-radius: 15px;
   margin-top: 140px;
-  width: 75vw !important;
+  width: 75vw;
   box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);
   background-color: #EEEEEE;
-  
-  
- 
+}
 
+  @media (max-width: 1000px) {
+  .input{
+  width: 80vw !important;
+  padding: 0px 50px 20px 10px;
+  margin-left: 50px;
+
+  } 
 }
 
 .form {
@@ -181,12 +188,20 @@ code {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    margin-bottom: 20px;
+}
+
+  @media (max-width: 1000px) {
+  .form{
+  margin-left: 100px;
+
+  } 
 }
 
 .submitForm {
     display: flex;
-    align-items: center;flex-direction: row;
+    align-items: center;
+    flex-direction: row;
   
 
 }
@@ -210,6 +225,27 @@ code {
   margin-top: 5px;
   cursor: pointer;
 }
+
+  @media (max-width: 1000px) {
+  .answer-container {
+       flex-direction: row;
+      align-items: normal;
+      
+  } 
+}
+
+  @media (max-width: 1000px) {
+  .answer-container img{
+ position: relative;
+ left: 175px;
+ top: 40px;
+ height: 30px;
+ background:none;
+ color: white;
+  } 
+}
+
+
 
 .response p {
     width: 700px;
@@ -283,6 +319,14 @@ code {
  align-items: center;
 }
 
+  @media (max-width: 1000px) {
+  .response {
+   min-height: 90% !important;
+   height: 90% !important;
+  } 
+}
+
+
 .response h1{
     text-align: center;
     margin-bottom: 100px;
@@ -291,12 +335,28 @@ code {
     margin-right: 100px;
 }
 
+  @media (max-width: 1000px) {
+  .response h1{
+   margin-left: 175px;
+  } 
+}
+
+
 
 .response p {
  line-height: 1.8.;
  margin-left: 80px;
  font-size: 20px;
 }
+
+  @media (max-width: 1000px) {
+  .response p{
+   width: 250px;
+   margin-left: 200px;
+   font-size: 17px;
+  } 
+}
+
 
 .newSubject {
     margin-top: 20px;
@@ -319,6 +379,14 @@ code {
   margin-right: 97px;
   margin-top: 20px;
 }
+
+  @media (max-width: 1000px) {
+  .aiPic {
+  margin-right: 0px;
+  margin-left: 75px;
+  }
+}
+
 
 .aiTutor {
   font-size: 50px !important;

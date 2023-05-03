@@ -5,10 +5,18 @@ import { MagnifyingGlass } from "react-loader-spinner";
 import axios from "axios";
 import { ChatContext } from "../context/ChatContext";
 import { baseUrl } from "../services/baseUrl";
+import { useTheme } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Chat = () => {
+  
+   const theme = useTheme();
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+  
   const { setSubject, classSubject, showChat, setShowChat, saveConvo } =
     useContext(ChatContext);
+
+    
 
   const { user } = useContext(AuthContext);
 
@@ -219,7 +227,7 @@ const Chat = () => {
   };
 
   return (
-    <div className="GPT">
+    <div className={"GPT"}>
       {!classSubject && classSubject !== "" && (
         <>
           <h1 className="chatIntro">
@@ -305,7 +313,7 @@ const Chat = () => {
                 value={userInput}
                 onChange={(e) => handleChange(e.target.value)}
                 placeholder="How could I help you today?"
-                rows={rows}
+                rows={isSmallScreen ? "3" : "1"}
               />
               <button className="submit" type="submit">
                 <img className="forward" src="./forward.png"></img>
